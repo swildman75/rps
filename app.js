@@ -5,19 +5,16 @@
 
 function getComputerChoice() {
   let randomNum = Math.floor(Math.random() * 3);
-  switch (randomNum) {
-    case 0:
-      console.log('rock');
-      break;
-    case 1:
-      console.log('paper');
-      break;
-    case 2:
-      console.log('scissors');
+  if (randomNum === 0) {
+    return 'rock';
+  } else if (randomNum === 1) {
+    return 'paper';
+  } else {
+    return 'scissors';
   }
 }
 
-getComputerChoice();
+console.log(getComputerChoice());
 
 const computerSelection = getComputerChoice();
 
@@ -34,3 +31,5 @@ function playRound(playerSelection, computerSelection) {
     return `You lose ${computerSelection} beats your ${computerSelection}`;
   }
 }
+
+playRound(playerSelection, computerSelection);
