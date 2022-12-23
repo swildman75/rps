@@ -18,3 +18,19 @@ function getComputerChoice() {
 }
 
 getComputerChoice();
+
+const computerSelection = getComputerChoice();
+
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection === computerSelection) {
+    return "It's a draw";
+  } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+    return `You win, ${playerSelection} beats ${computerSelection}`;
+  } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+    return `You win, ${playerSelection} beats ${computerSelection}`;
+  } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+    return `You win, ${playerSelection} beats ${computerSelection}`;
+  } else {
+    return `You lose ${computerSelection} beats your ${computerSelection}`;
+  }
+}
